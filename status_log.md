@@ -72,3 +72,7 @@ git merge experiment
 Part D Section 6
 git push origin master --rebase
 git push origin master
+Part D Section 7
+git add status_log.md
+git commit -m "Thêm file status_log.md"
+git push origin main
