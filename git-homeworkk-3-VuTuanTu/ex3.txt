@@ -1,0 +1,90 @@
+Part A Section 1
+mkdir ex3
+Part A Section 2
+cd ex3
+Part A Section 3
+mkdir dir1
+mkdir dir2
+Part A Section 4
+touch HelloWorld.txt
+cp HelloWorld.txt dir1/
+Part A Section 5
+cp -i HelloWorld.txt dir1/
+Part A Section 6
+mv HelloWorld.txt Hi.txt
+Part A Section 7
+mv Hi.txt dir2/
+Part B Section 1
+ln dir2/Hi.txt Hi-hard
+ln dir2/Hi.txt dir1/Hi-hard
+ln dir2/Hi.txt dir2/Hi-hard
+Part B Section 2
+ln -s dir2/Hi.txt Hi-sym
+Part B Section 3
+rm Hi-hard
+Part B Section 4
+rm dir2/Hi.txt
+Part B Section 5
+ls -li
+total 8
+1707814 lrwxrwxrwx 1 tuantu tuantu   11 Sep  6 01:59 Hi-sym -> dir2/Hi.txt
+1708425 drwxrwxr-x 2 tuantu tuantu 4096 Sep  6 01:59 dir1
+1709130 drwxrwxr-x 2 tuantu tuantu 4096 Sep  6 01:59 dir2
+Part C Section 1
+ls -1 /bin /usr/bin | grep -v ':' | sort -u | wc -l
+Output: 1542
+Part C Section 2
+ls -1 /bin /usr/bin | grep -v ':' | sort -u | grep "zip"
+Output:
+bunzip2
+bzip2
+bzip2recover
+funzip
+gunzip
+gzip
+preunzip
+prezip
+prezip-bin
+streamzip
+unzip
+unzipsfx
+zip
+zipcloak
+zipdetails
+zipgrep
+zipinfo
+zipnote
+zipsplit
+Part C Section 3
+head -n 5 mytext.txt
+Output:
+Ngồi
+ngẩn
+ngơ
+anh
+hát
+tail -n 5 mytext.txt
+Output:
+lúc
+dỗi
+hờn
+anh
+sai
+wc mytext.txt
+Output:
+43  43 230 mytext.txt
+Part C Section 4
+ls -la | tee full_listing.txt
+Part D Section 1
+mkdir permissions
+cd permissions
+chmod 600 secret.txt
+chmod 664 shared.txt
+chmod 777 public.txt
+Part D Section 2
+umask
+Output: 0002
+ls -l neww.
+- Vì khi tạo một file mới luôn được mặc định là 666 (mọi cá thể đều có quyền đọc và viết trên file này), ở đây umask là 0002 thì quyền mới sau khi tạo file là 666 - 0002 = 664 (tức là owner và group sẽ có quyền read and write, còn others chỉ có quyền read = 4)
+- Đó là lí do vì sao output của ls -l neww.txt là -rw-rw-r-- 1 tuantu tuantu 0 Sep  6 02:18 neww.txt
+

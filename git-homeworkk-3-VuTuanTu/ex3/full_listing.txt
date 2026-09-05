@@ -1,0 +1,7 @@
+total 20
+drwxrwxr-x 4 tuantu tuantu 4096 Sep  6 02:10 .
+drwxrwxr-x 4 tuantu tuantu 4096 Sep  6 01:57 ..
+lrwxrwxrwx 1 tuantu tuantu   11 Sep  6 01:59 Hi-sym -> dir2/Hi.txt
+drwxrwxr-x 2 tuantu tuantu 4096 Sep  6 01:59 dir1
+drwxrwxr-x 2 tuantu tuantu 4096 Sep  6 01:59 dir2
+-rw-rw-r-- 1 tuantu tuantu  230 Sep  6 02:10 mytext.txt
